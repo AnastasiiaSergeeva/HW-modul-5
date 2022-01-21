@@ -29,6 +29,21 @@ Storage.prototype.removeItem = function (item) {
 }
     }
 }
+or
+class Storage {
+    constructor (items) {
+        this.items = items;
+    }
+    getItems() {
+    return this.items;
+}
+addItem (newItem) {
+    return this.items.push(newItem);
+}
+removeItem (itemToRemove) {
+    return this.items.splice(this.items.indexOf(itemToRemove), 1);
+}
+}
 // Пиши код выше этой строки
 const storage = new Storage(['Нанитоиды', 'Пролонгер', 'Антигравитатор']);
 console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
